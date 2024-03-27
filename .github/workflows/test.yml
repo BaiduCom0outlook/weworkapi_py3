@@ -1,0 +1,15 @@
+name: Test Code
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [fts]
+
+jobs:
+  fts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: start
+        run: |
+          sudo pip install flask requests pycryptodome
+        
